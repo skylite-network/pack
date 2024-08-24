@@ -8,6 +8,8 @@ jobs:
   optimize:
     name: "Optimize Resource Pack"
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout Repository
