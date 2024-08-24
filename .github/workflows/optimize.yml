@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Run PackSquash
-        uses: ComunidadAylas/PackSquash-action@v4.0.2
+        uses: ComunidadAylas/PackSquash-action@v4
         with:
           packsquash_version: latest
           options: |
@@ -24,8 +24,17 @@ jobs:
             zip_spec_conformance_level = "high"
             output_file_path = "/tmp/pack.zip"
 
+      - name: Generate SHA-1 Hash
+        uses: jmgilman/actions-generate-checksum@v1
+        with:
+          method: sha1
+          patterns:
+          - /tmp/pack.zip
+
       - name: Release
-        uses: softprops/action-gh-release@v2.0.8
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
-          files: /tmp/pack.zip
+          files:
+          - checksum.txt
+          - /tmp/pack.zip
