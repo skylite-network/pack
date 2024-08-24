@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.7
         with:
           fetch-depth: 0
 
       - name: Run PackSquash
-        uses: ComunidadAylas/PackSquash-action@v4
+        uses: ComunidadAylas/PackSquash-action@v4.0.2
         with:
           packsquash_version: latest
           options: |
@@ -25,16 +25,16 @@ jobs:
             output_file_path = "/tmp/pack.zip"
 
       - name: Generate SHA-1 Hash
-        uses: jmgilman/actions-generate-checksum@v1
+        uses: jmgilman/actions-generate-checksum@v1.0.1
         with:
           method: sha1
-          patterns:
-          - /tmp/pack.zip
+          patterns: |
+            /tmp/pack.zip
 
       - name: Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v2.0.8
         with:
           tag_name: latest
-          files:
-          - checksum.txt
-          - /tmp/pack.zip
+          files: |
+            checksum.txt
+            /tmp/pack.zip
