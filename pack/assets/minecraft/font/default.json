@@ -1,0 +1,90 @@
+{
+    "providers": [
+        {
+            "type": "space",
+            "advances": {
+                "\uE001": 1,
+                "\uE002": 2,
+                "\uE003": 4,
+                "\uE004": 8,
+                "\uE005": 16,
+                "\uE006": 32,
+                "\uE007": 64,
+                "\uE008": 128,
+                "\uE009": 256,
+                "\uE00A": -1,
+                "\uE00B": -2,
+                "\uE00C": -4,
+                "\uE00D": -8,
+                "\uE00E": -16,
+                "\uE00F": -32,
+                "\uE010": -64,
+                "\uE011": -128,
+                "\uE012": -256
+            }
+        },
+        {
+            "type": "bitmap",
+            "file": "skylite:font/fade.png",
+            "ascent": 5000,
+            "height": 10000,
+            "chars": ["\uE100"]
+        },
+        {
+            "type": "bitmap",
+            "file": "skylite:font/logo/large1.png",
+            "ascent": -10,
+            "height": 40,
+            "chars": ["\uE101"]
+        },
+        {
+            "type": "bitmap",
+            "file": "skylite:font/logo/large2.png",
+            "ascent": -10,
+            "height": 40,
+            "chars": ["\uE102"]
+        },
+        {
+            "type": "bitmap",
+            "file": "skylite:font/logo/small.png",
+            "ascent": 0,
+            "height": 30,
+            "chars": ["\uE103"]
+        },
+        {
+            "type": "bitmap",
+            "file": "skylite:font/ranks/default.png",
+            "ascent": 7,
+            "height": 7,
+            "chars": ["\uE200"]
+        },
+        {
+            "type": "bitmap",
+            "file": "skylite:font/ranks/creator.png",
+            "ascent": 7,
+            "height": 7,
+            "chars": ["\uE201"]
+        },
+        {
+            "type": "bitmap",
+            "file": "skylite:font/ranks/moderator.png",
+            "ascent": 7,
+            "height": 7,
+            "chars": ["\uE202"]
+        },
+        {
+            "type": "bitmap",
+            "file": "skylite:font/ranks/admin.png",
+            "ascent": 7,
+            "height": 7,
+            "chars": ["\uE203"]
+        },
+        {
+            "type": "bitmap",
+            "file": "skylite:font/ranks/owner.png",
+            "ascent": 7,
+            "height": 7,
+            "chars": ["\uE204"]
+        }
+    ]
+}

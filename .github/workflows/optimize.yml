@@ -1,0 +1,31 @@
+name: "Optimize Resource Pack"
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  optimize:
+    name: "Optimize Resource Pack"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run PackSquash
+        uses: ComunidadAylas/PackSquash-action@v4.0.2
+        with:
+          packsquash_version: latest
+          options: |
+            pack_directory = "pack"
+            zip_spec_conformance_level = "high"
+            output_file_path = "/tmp/pack.zip"
+
+      - name: Release
+        uses: softprops/action-gh-release@v2.0.8
+        with:
+          tag_name: latest
+          files: /tmp/pack.zip
