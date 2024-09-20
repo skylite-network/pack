@@ -2,7 +2,6 @@ name: "Optimize Resource Pack"
 
 on:
   - push
-  - pull_request
 
 jobs:
   optimize:
